@@ -8,9 +8,9 @@ function HotCollections() {
   const [hotData, setHotData] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  function getHotData() {
+  async function getHotData() {
     setLoading(true);
-    const { data } = axios.get(
+    const { data } = await axios.get(
       `https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections`
     );
     setHotData(data);
