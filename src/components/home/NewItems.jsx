@@ -83,7 +83,7 @@ const NewItems = () => {
                       </Link>
                     </div>
 
-                    <Timer nftInfo={item.expiryDate}/>
+                    <Timer nftInfo={item}/>
                     
 
                     <div className="nft__item_wrap">
