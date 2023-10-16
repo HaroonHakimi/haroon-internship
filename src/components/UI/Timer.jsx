@@ -9,7 +9,7 @@ function Timer({ nftInfo })
     function updateTimer()
     {
         let startTime = Date.now()
-        let time = nftInfo - Date.now()
+        let time = nftInfo.expiryDate - Date.now()
 
         let seconds = time / 1000
         let minutes = seconds / 60
