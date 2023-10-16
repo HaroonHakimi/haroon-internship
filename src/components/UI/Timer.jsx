@@ -6,6 +6,7 @@ function Timer({ nftInfo })
     const [minutes, setMinutes] = useState()
     const [hours, setHours] = useState()
 
+
     function updateTimer()
     {
         let startTime = Date.now()
@@ -35,7 +36,7 @@ function Timer({ nftInfo })
     return (
         <>
         {
-            nftInfo && <div className="de_countdown">{hours}h {minutes}m {seconds}s</div>
+           seconds > 0 && <div className="de_countdown">{hours}h {minutes}m {seconds}s</div>
         }
         </>
     )
