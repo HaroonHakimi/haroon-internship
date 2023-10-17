@@ -47,11 +47,6 @@ const ExploreItems = () => {
 
   function showMoreNft() {
     setNfts((Nfts) => Nfts + 4);
-
-    if (Nfts.length === 0)
-    {
-      document.getElementsByClassName("disabled").style.color="red"
-    }
   }
 
   
@@ -75,9 +70,17 @@ const ExploreItems = () => {
       ) : (
         exploreData
           .slice(0, Nfts)
-          .map((explore) => <NftCard nftInfo={explore} />)
+          .map((explore) => (
+            <div
+            key={explore.id}
+            className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"
+            style={{ display: "block", backgroundSize: "cover" }}
+          >
+          <NftCard nftInfo={explore} />
+          </div>
+          ))
       )}
-      <div className="col-md-12 text-center disabled" >
+      <div className="col-md-12 text-center" >
         <Link
           to=""
           id="loadmore"

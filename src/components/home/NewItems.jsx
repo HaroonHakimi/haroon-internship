@@ -6,6 +6,7 @@ import axios from "axios";
 import NftCard from "../UI/NftCard";
 import NftCardSkeleton from "../UI/NftCardSkeleton";
 
+
 const NewItems = () => {
   const [itemsData, setItemsData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -47,11 +48,13 @@ const NewItems = () => {
               1000: { items: 4 },
             }}
           >
-            {loading && itemsData.length === 0 ? (
-              <NftCardSkeleton />
-            ) : (
-              itemsData.map((item) => <NftCard nftInfo={item} />)
-            )}
+          {loading && itemsData.length === 0
+            ? <NftCardSkeleton/>
+            : itemsData.map((item) => (
+
+                <NftCard nftInfo={item}/>
+
+              ))}
           </OwlCarousel>
         </div>
       </div>
