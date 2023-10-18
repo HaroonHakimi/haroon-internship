@@ -9,7 +9,7 @@ function NftCard({ nftInfo })
             <div className="nft__item">
               <div className="author_list_pp">
                 <Link
-                  to="/author"
+                  to={`/author/${nftInfo.authorId}`}
                   data-bs-toggle="tooltip"
                   data-bs-placement="top"
                 >
@@ -37,7 +37,7 @@ function NftCard({ nftInfo })
                     </div>
                   </div>
                 </div>
-                <Link to="/item-details">
+                <Link to={`/item-details/${nftInfo.nftId}`}>
                   <img
                     src={nftInfo.nftImage}
                     className="lazy nft__item_preview"
@@ -46,7 +46,7 @@ function NftCard({ nftInfo })
                 </Link>
               </div>
               <div className="nft__item_info">
-                <Link to="/item-details">
+                <Link to={`/item-details/${nftInfo.nftId}`}>
                   <h4>{nftInfo.title}</h4>
                 </Link>
                 <div className="nft__item_price">{nftInfo.price} ETH</div>
