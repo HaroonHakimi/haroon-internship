@@ -91,7 +91,6 @@ const ExploreItems = () => {
           Load more
         </Link>
         }
-        
       </div>
     </>
   );
