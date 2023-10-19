@@ -6,7 +6,6 @@ import axios from "axios";
 import NftCard from "../UI/NftCard";
 import NftCardSkeleton from "../UI/NftCardSkeleton";
 
-
 const NewItems = () => {
   const [itemsData, setItemsData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -29,7 +28,13 @@ const NewItems = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">
-              <h2>New Items</h2>
+              <h2
+                data-aos="fade-in"
+                data-aos-delay="100"
+                data-aos-duration="800"
+              >
+                New Items
+              </h2>
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
@@ -48,13 +53,11 @@ const NewItems = () => {
               1000: { items: 4 },
             }}
           >
-          {loading && itemsData.length === 0
-            ? <NftCardSkeleton/>
-            : itemsData.map((item) => (
-
-                <NftCard nftInfo={item}/>
-
-              ))}
+            {loading && itemsData.length === 0 ? (
+              <NftCardSkeleton />
+            ) : (
+              itemsData.map((item) => <NftCard nftInfo={item} />)
+            )}
           </OwlCarousel>
         </div>
       </div>

@@ -26,7 +26,13 @@ const TopSellers = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">
-              <h2>Top Sellers</h2>
+              <h2
+                data-aos="fade-in"
+                data-aos-delay="100"
+                data-aos-duration="800"
+              >
+                Top Sellers
+              </h2>
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
@@ -34,7 +40,7 @@ const TopSellers = () => {
             <ol className="author_list">
               {loading && sellersData.length === 0
                 ? new Array(12).fill(0).map((_, index) => (
-                  <li key={index}>
+                    <li key={index}>
                       <div className="author_list_pp">
                         <Skeleton
                           width={"50px"}
@@ -55,10 +61,15 @@ const TopSellers = () => {
                           borderRadius={"4px"}
                         />
                       </div>
-                  </li>
+                    </li>
                   ))
                 : sellersData.map((seller) => (
-                    <li key={seller.id}>
+                    <li
+                      key={seller.id}
+                      data-aos="fade-in"
+                      data-aos-delay="100"
+                      data-aos-duration="800"
+                    >
                       <div className="author_list_pp">
                         <Link to="/author">
                           <img
