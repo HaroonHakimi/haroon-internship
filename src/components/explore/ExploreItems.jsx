@@ -81,7 +81,8 @@ const ExploreItems = () => {
           ))
       )}
       <div className="col-md-12 text-center" >
-        <Link
+        {
+          Nfts === 16 ? "" : <Link
           to=""
           id="loadmore"
           className="btn-main lead"
@@ -89,6 +90,8 @@ const ExploreItems = () => {
         >
           Load more
         </Link>
+        }
+        
       </div>
     </>
   );
