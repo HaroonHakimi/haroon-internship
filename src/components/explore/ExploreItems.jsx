@@ -81,7 +81,7 @@ const ExploreItems = () => {
           ))
       )}
       <div className="col-md-12 text-center" >
-        {
+      {
           Nfts === 16 ? "" : <Link
           to=""
           id="loadmore"
